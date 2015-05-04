@@ -25,29 +25,65 @@ a {
     background-color: cornflowerblue;
 }
 
-#div1{
+#div{
     position:absolute;
     top:50px;
     left:50px;
-    width:100px;
-    height:100px;
+    width:500px;
+    height:300px;
     background-color:red;
 }
 
-#div2{
-    position: fixed;
-    top:20px;
-    left:20px;
+#div1{
+    float: none;
+    margin-left: 0px;
+    margin-top: 20px;
+    top:0px;
+    left:10px;
     width:50px;
-    height:50px;
+    height:20px;
+    background-color:green;
+    opacity: 0.5;
+}
+
+#div2{
+    float: none;
+    margin-left: 0px;
+    margin-top: 30px;
+    top:0px;
+    left:10px;
+    width:50px;
+    height:20px;
     background-color:blue;
+    opacity: 0.5;
 }
 
 /*
-top、bottom、left、right是绝对定位，必须设置position为absolute,如果用top等，
-而position未设置为absolute，那设置是不起作用的。
-这个绝对定位，是相对body或者position：relative的父级元素的绝对定位。
+position:
+absolute
+相对于第一个父元素(static 定位除外)绝对定位，不占位，top,left,margin起作用。
+fixed
+相对于浏览器窗口固定,不占位，top,left,margin起作用。
+relative
+相对于其在文件档流中原始位置进行相对定位,占位，且会带后面的元素，top,left,margin起作用。
+static 默认值。没有定位，元素出现在正常的文档流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+inherit 从父元素继承 position 属性的值,不占位，top,left,margin起作用。
 
-margin系列是相对定位position：relative，相对于其它容器
+display:
+block
+独占一行，默认情况下，宽度为父元素宽度。
+拥有width,height,margin和padding属性。
+block
+排在一行中，width,height属性无效。
+水平方向的padding-left, padding-right, margin-left, margin-right有效；
+竖直方向的padding-top, padding-bottom, margin-top, margin-bottom无效。
+inline-block
+将对象呈现为inline对象，但是对象的内容作为block对象呈现。
 
+float:
+left right none
+原位置被清空
+margin,padding有效，top无效
+none相当于block
+clear:both;
 */
